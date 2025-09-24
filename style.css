@@ -639,3 +639,12 @@
   font-weight: 700;
   border-bottom: 4px solid #005c62;
 }
+
+.menu-btn {
+  width: fit-content;
+}
+
+.Subactive {
+  color: #005c62 !important;
+  border-bottom: 4px solid #005c62 !important;
+}
