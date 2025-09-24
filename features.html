@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HIVE</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    /* Header 1 */
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 2rem;
+      background-color: #f8f9fa;
+      border-bottom: 1px solid #ddd;
+      position: relative;
+      z-index: 10;
+    }
+
+    .header-top .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .header-top button {
+      margin-left: 0.5rem;
+    }
+
+    .menu-icon {
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Header 2 */
+    .header-bottom {
+      display: flex;
+      justify-content: center;
+      background-color: #e9ecef;
+      padding: 0.5rem 0;
+      position: relative;
+      z-index: 15;
+    }
+
+    .header-bottom .menu-item {
+      position: relative;
+      margin: 0 1rem;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .header-bottom .menu-item>a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    .header-dropdown-container {
+      display: none;
+      position: fixed;
+      top: 90px;
+      left: 0;
+      width: 50%;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 1rem;
+      z-index: 20;
+    }
+
+    .header-dropdown-content {
+      display: none;
+    }
+
+    .header-dropdown-content a {
+      display: block;
+      margin: 0.25rem 0;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .header-dropdown-content a:hover {
+      color: #0d6efd;
+    }
+
+    /* Breadcrumb bar */
+    #breadcrumb-bar {
+      border-bottom: 1px solid #ddd;
+      font-weight: 500;
+      padding: 0.5rem 2rem;
+      background-color: #fff;
+      position: relative;
+      z-index: 12;
+    }
+
+    #breadcrumb-bar .breadcrumb {
+      margin: 0;
+      background: none;
+    }
+
+    #breadcrumb-bar .breadcrumb-item a {
+      text-decoration: none;
+      color: #0d6efd;
+    }
+
+    #breadcrumb-bar .breadcrumb-item.active {
+      color: #6c757d;
+    }
+
+    /* Side menu overlay */
+    .side-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      transition: 0.3s;
+      z-index: 16;
+    }
+
+    /* Side menu */
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: -300px;
+      width: 300px;
+      height: 100vh;
+      background-color: #fff;
+      padding: 1rem;
+      transition: 0.3s;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .side-menu-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .side-menu-top .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .side-menu .close-btn {
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Side menu links */
+    .side-menu .menu-item {
+      margin: 0.5rem 0;
+      cursor: pointer;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .side-menu .menu-item>a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    .side-submenu {
+      display: none;
+      padding-left: 1rem;
+      flex-direction: column;
+    }
+
+    .side-submenu a {
+      margin: 0.25rem 0;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .side-submenu a:hover {
+      color: #0d6efd;
+    }
+
+    .side-menu .arrow {
+      position: absolute;
+      right: 0;
+    }
+
+    /* Active state */
+    .header-bottom .menu-item>a.active,
+    .header-dropdown-content a.active,
+    .side-menu .menu-item>a.active,
+    .side-submenu a.active {
+      color: #0d6efd !important;
+      font-weight: bold;
+    }
+
+    section {
+      height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header 1 -->
+  <div class="header-top">
+    <div class="menu-icon" id="menuToggle">&#9776;</div>
+    <div class="logo">HIVE</div>
+    <div>
+      <button class="btn btn-outline-primary btn-sm">Register</button>
+      <button class="btn btn-primary btn-sm">Sign In</button>
+    </div>
+  </div>
+
+  <!-- Header 2 -->
+  <div class="header-bottom">
+    <div class="menu-item" data-dropdown="homeDropdown">
+      <a href="home.html">Home</a>
+    </div>
+    <div class="menu-item" data-dropdown="solutionsDropdown">
+      <a href="solutions.html">Solutions</a>
+    </div>
+    <div class="menu-item" data-dropdown="featuresDropdown">
+      <a href="features.html">Features</a>
+    </div>
+    <div class="menu-item" data-dropdown="benefitsDropdown">
+      <a href="benefits.html">Benefits</a>
+    </div>
+    <div class="menu-item" data-dropdown="resourcesDropdown">
+      <a href="resources.html">Resources</a>
+    </div>
+  </div>
+
+  <!-- Breadcrumb -->
+  <nav id="breadcrumb-bar" aria-label="breadcrumb">
+    <ol class="breadcrumb m-0"></ol>
+  </nav>
+
+  <!-- Dropdown container -->
+  <div class="header-dropdown-container" id="dropdownContainer">
+    <div id="homeDropdown" class="header-dropdown-content">
+      <a href="home.html#submenu1">Home Submenu 1</a>
+      <a href="home.html#submenu2">Home Submenu 2</a>
+      <a href="home.html#submenu3">Home Submenu 3</a>
+      <a href="home.html#submenu4">Home Submenu 4</a>
+    </div>
+    <div id="solutionsDropdown" class="header-dropdown-content">
+      <a href="solutions.html#submenu1">Solutions Submenu 1</a>
+      <a href="solutions.html#submenu2">Solutions Submenu 2</a>
+      <a href="solutions.html#submenu3">Solutions Submenu 3</a>
+      <a href="solutions.html#submenu4">Solutions Submenu 4</a>
+    </div>
+    <div id="featuresDropdown" class="header-dropdown-content">
+      <a href="features.html#submenu1">Features Submenu 1</a>
+      <a href="features.html#submenu2">Features Submenu 2</a>
+      <a href="features.html#submenu3">Features Submenu 3</a>
+      <a href="features.html#submenu4">Features Submenu 4</a>
+    </div>
+    <div id="benefitsDropdown" class="header-dropdown-content">
+      <a href="benefits.html#submenu1">Benefits Submenu 1</a>
+      <a href="benefits.html#submenu2">Benefits Submenu 2</a>
+      <a href="benefits.html#submenu3">Benefits Submenu 3</a>
+      <a href="benefits.html#submenu4">Benefits Submenu 4</a>
+    </div>
+    <div id="resourcesDropdown" class="header-dropdown-content">
+      <a href="resources.html#submenu1">Resources Submenu 1</a>
+      <a href="resources.html#submenu2">Resources Submenu 2</a>
+      <a href="resources.html#submenu3">Resources Submenu 3</a>
+      <a href="resources.html#submenu4">Resources Submenu 4</a>
+    </div>
+  </div>
+
+  <!-- Side menu overlay -->
+  <div class="side-menu-overlay" id="overlay">
+    <div class="side-menu" id="sideMenu">
+      <div class="side-menu-top">
+        <div class="logo">HIVE</div>
+        <div class="close-btn" id="closeMenu">&times;</div>
+      </div>
+      <div class="menu-item">
+        <a href="home.html">Home</a>
+        <span class="arrow"><i class="fa fa-chevron-circle-down"></i></span>
+        <div class="side-submenu">
+          <a href="home.html#submenu1">Home Submenu 1</a>
+          <a href="home.html#submenu2">Home Submenu 2</a>
+          <a href="home.html#submenu3">Home Submenu 3</a>
+          <a href="home.html#submenu4">Home Submenu 4</a>
+        </div>
+      </div>
+      <div class="menu-item">
+        <a href="solutions.html">Solutions</a>
+        <span class="arrow"><i class="fa fa-chevron-circle-down"></i></span>
+        <div class="side-submenu">
+          <a href="solutions.html#submenu1">Solutions Submenu 1</a>
+          <a href="solutions.html#submenu2">Solutions Submenu 2</a>
+          <a href="solutions.html#submenu3">Solutions Submenu 3</a>
+          <a href="solutions.html#submenu4">Solutions Submenu 4</a>
+        </div>
+      </div>
+      <div class="menu-item">
+        <a href="features.html">Features</a>
+        <span class="arrow"><i class="fa fa-chevron-circle-down"></i></span>
+        <div class="side-submenu">
+          <a href="features.html#submenu1">Features Submenu 1</a>
+          <a href="features.html#submenu2">Features Submenu 2</a>
+          <a href="features.html#submenu3">Features Submenu 3</a>
+          <a href="features.html#submenu4">Features Submenu 4</a>
+        </div>
+      </div>
+      <div class="menu-item">
+        <a href="benefits.html">Benefits</a>
+        <span class="arrow"><i class="fa fa-chevron-circle-down"></i></span>
+        <div class="side-submenu">
+          <a href="benefits.html#submenu1">Benefits Submenu 1</a>
+          <a href="benefits.html#submenu2">Benefits Submenu 2</a>
+          <a href="benefits.html#submenu3">Benefits Submenu 3</a>
+          <a href="benefits.html#submenu4">Benefits Submenu 4</a>
+        </div>
+      </div>
+      <div class="menu-item">
+        <a href="resources.html">Resources</a>
+        <span class="arrow"><i class="fa fa-chevron-circle-down"></i></span>
+        <div class="side-submenu">
+          <a href="resources.html#submenu1">Resources Submenu 1</a>
+          <a href="resources.html#submenu2">Resources Submenu 2</a>
+          <a href="resources.html#submenu3">Resources Submenu 3</a>
+          <a href="resources.html#submenu4">Resources Submenu 4</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <section id="submenu1">
+      <h2>Home Submenu 1</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt arcu in lectus bibendum, nec luctus
+        purus euismod.</p>
+    </section>
+
+    <section id="submenu2">
+      <h2>Home Submenu 2</h2>
+      <p>Curabitur rhoncus magna et neque posuere, et egestas nulla porttitor. Integer nec nunc et urna dapibus feugiat.
+      </p>
+    </section>
+
+    <section id="submenu3">
+      <h2>Home Submenu 3</h2>
+      <p>Vestibulum posuere, purus sed cursus suscipit, odio nunc euismod arcu, a facilisis ligula justo nec nulla.</p>
+    </section>
+
+    <section id="submenu4">
+      <h2>Home Submenu 4</h2>
+      <p>Phasellus sed felis at turpis tristique dictum. Donec imperdiet sapien nec orci luctus, ac egestas turpis
+        bibendum.</p>
+    </section>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const overlay = document.getElementById('overlay');
+    const sideMenu = document.getElementById('sideMenu');
+    const closeMenu = document.getElementById('closeMenu');
+
+    // Open side menu
+    menuToggle.addEventListener('click', () => {
+      overlay.style.width = '100%';
+      sideMenu.style.left = '0';
+    });
+
+    // Close side menu via X
+    closeMenu.addEventListener('click', () => {
+      overlay.style.width = '0';
+      sideMenu.style.left = '-300px';
+    });
+
+    // Close side menu by clicking outside
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        overlay.style.width = '0';
+        sideMenu.style.left = '-300px';
+      }
+    });
+
+    // Toggle submenus in side menu
+    document.querySelectorAll('.side-menu .menu-item .arrow').forEach(arrow => {
+      arrow.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const submenu = arrow.parentElement.querySelector('.side-submenu');
+        if (submenu) {
+          submenu.style.display = submenu.style.display === 'flex' ? 'none' : 'flex';
+        }
+      });
+    });
+
+    // Header dropdown handling
+    const headerItems = document.querySelectorAll('.header-bottom .menu-item');
+    const dropdownContainer = document.getElementById('dropdownContainer');
+    const dropdownContents = document.querySelectorAll('.header-dropdown-content');
+    let hideTimeout;
+
+    headerItems.forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        clearTimeout(hideTimeout);
+        const dropdownId = item.getAttribute('data-dropdown');
+        dropdownContents.forEach(dc => dc.style.display = 'none');
+        document.getElementById(dropdownId).style.display = 'block';
+        dropdownContainer.style.display = 'block';
+      });
+    });
+
+    dropdownContainer.addEventListener('mouseleave', () => {
+      hideTimeout = setTimeout(() => {
+        dropdownContainer.style.display = 'none';
+        dropdownContents.forEach(dc => dc.style.display = 'none');
+      }, 200);
+    });
+
+    // Helper functions
+    function capitalize(str) {
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+    function formatSubmenu(hash) {
+      return hash.replace("#", "").replace(/submenu(\d+)/i, "Submenu $1");
+    }
+
+    // Highlight active links and breadcrumb on scroll
+    const sections = document.querySelectorAll("section");
+    function updateBreadcrumbOnScroll() {
+      const breadcrumb = document.querySelector("#breadcrumb-bar .breadcrumb");
+      const currentPath = window.location.pathname.split("/").pop();
+      breadcrumb.innerHTML = "";
+
+      // Page breadcrumb
+      if (currentPath) {
+        const pageItem = document.createElement("li");
+        pageItem.classList.add("breadcrumb-item");
+        pageItem.innerHTML = `<a href="${currentPath}">${capitalize(currentPath.replace(".html", ""))}</a>`;
+        breadcrumb.appendChild(pageItem);
+      }
+
+      // Determine current section
+      let visibleSection = null;
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+          visibleSection = section;
+        }
+      });
+
+      if (visibleSection) {
+        const subItem = document.createElement("li");
+        subItem.classList.add("breadcrumb-item", "active");
+        subItem.textContent = formatSubmenu("#" + visibleSection.id);
+        breadcrumb.appendChild(subItem);
+
+        // Update active links
+        document.querySelectorAll(
+          '.header-bottom .menu-item>a, .header-dropdown-content a, .side-menu .menu-item>a, .side-submenu a'
+        ).forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === currentPath + "#" + visibleSection.id) {
+            link.classList.add("active");
+          }
+          if (link.getAttribute("href") === currentPath && !link.getAttribute("href").includes("#")) {
+            link.classList.add("active");
+          }
+        });
+      }
+    }
+
+    // Initial run and event listeners
+    window.addEventListener("load", updateBreadcrumbOnScroll);
+    window.addEventListener("scroll", updateBreadcrumbOnScroll);
+    window.addEventListener("hashchange", updateBreadcrumbOnScroll);
+  </script>
+</body>
+
+</html>
