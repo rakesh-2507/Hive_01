@@ -420,6 +420,7 @@
   }
   .header-dropdown-container {
     left: 3rem;
+    width: 65%;
   }
 
   .submenuone,
