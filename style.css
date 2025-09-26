@@ -404,7 +404,7 @@
 
   .header-bottom {
     font-size: 0.8rem;
-    padding: 0%;
+    padding: 0.5rem 0rem 0rem 3rem;
     justify-content: flex-start;
     overflow-x: auto;
     white-space: nowrap;
@@ -417,6 +417,9 @@
   .header-dropdown-content .dropdown-left,
   .header-dropdown-content .dropdown-right {
     width: 50%;
+  }
+  .header-dropdown-container {
+    left: 3rem;
   }
 
   .submenuone,
