@@ -246,7 +246,7 @@
 
 .section-content-20 {
   flex: 0 0 20%;
-  padding: 2.5rem 0rem 0rem 0rem;
+  padding: 2.5rem 0.4rem 0rem 1rem;
   box-sizing: border-box;
   background-color: #d8d8d8;
 }
@@ -317,7 +317,7 @@
   }
 
   .header-bottom {
-    font-size: 0.8rem;
+    font-size: 0.5rem;
     justify-content: flex-start;
     overflow-x: auto;
     white-space: nowrap;
@@ -403,7 +403,7 @@
   }
 
   .header-bottom {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     padding: 0.5rem 0rem 0rem 3rem;
     justify-content: flex-start;
     overflow-x: auto;
@@ -452,7 +452,7 @@
   }
 
   .header-bottom {
-    font-size: 1rem;
+    font-size: 0.8rem;
     justify-content: flex-start;
     padding: 1rem 0rem 0rem 10rem;
   }
@@ -487,7 +487,7 @@
 
   .header-bottom .menu-item {
     margin: 0 1.25rem;
-    font-size: 1.05rem;
+    font-size: 0.9rem;
   }
 
   #breadcrumb-bar {
@@ -535,7 +535,7 @@
 
   .header-bottom .menu-item {
     margin: 0 1.5rem;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 
   #breadcrumb-bar {
@@ -679,4 +679,12 @@
   font-weight: 500;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: ease-in 0.2s;
+}
+
+strong{
+  font-weight: 500;
+}
+
+h3{
+  font-size: 0.9rem;
 }
