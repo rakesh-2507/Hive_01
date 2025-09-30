@@ -688,3 +688,16 @@ strong{
 h3{
   font-size: 0.9rem;
 }
+
+@font-face {
+    font-family: 'Noricon';
+    src: url('../fonts/Norican.otf') format('opentype'),
+         url('../fonts/Norican-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.logo {
+    font-family: 'Noricon', sans-serif; 
+    letter-spacing: 0.3rem;
+}
