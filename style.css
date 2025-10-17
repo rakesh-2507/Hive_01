@@ -11,10 +11,20 @@
 }
 
 .header-top .logo {
-  font-weight: bold;
-  font-size: 1.5rem;
+  font-family: "fangsong";
+  font-size: 2.5rem;
+  color: #000;
+  letter-spacing: normal;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
 }
-
+.menu-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 .header-top button {
   margin-left: 0.5rem;
 }
@@ -55,7 +65,7 @@
 .header-dropdown-container {
   display: none;
   position: fixed;
-  top: 90px;
+  top: 115px;
   left: 15rem;
   width: 50%;
   background: #fff;
@@ -85,7 +95,7 @@
 }
 
 .header-dropdown-content .dropdown-left {
-  border-right: 4px solid #005c62;
+  border-right: 2px solid #005c62;
   margin: 0rem 4rem 0rem 0rem;
 }
 
@@ -107,12 +117,12 @@
 #breadcrumb-bar .breadcrumb-item a {
   text-decoration: none;
   color: #005c62;
-  border-bottom: 4px solid #005c62;
-  font-weight: 900;
+  text-transform: uppercase;
 }
 
 #breadcrumb-bar .breadcrumb-item.active {
   color: #005c62;
+  text-transform: uppercase;
 }
 
 /* Side menu overlay */
@@ -151,8 +161,12 @@
 }
 
 .side-menu-top .logo {
-  font-weight: bold;
   font-size: 1.5rem;
+  font-family: forisong;
+  letter-spacing: normal;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .side-menu .close-btn {
@@ -604,9 +618,16 @@
 }
 
 .sticky-center .logo {
-  font-weight: bold;
-  font-size: 1.5rem;
+  font-weight: 400;
+  font-size: 1.8rem;
   padding: 0 1rem;
+  font-family: fangsong;
+  letter-spacing: 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min-content;
+  gap: 0.3rem;
 }
 
 .sticky-center a {
@@ -681,23 +702,23 @@
   transition: ease-in 0.2s;
 }
 
-strong{
+strong {
   font-weight: 500;
 }
 
-h3{
+h3 {
   font-size: 0.9rem;
 }
 
 @font-face {
-    font-family: 'Noricon';
-    src: url('../fonts/Norican.otf') format('opentype'),
-         url('../fonts/Norican-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Noricon";
+  src: url("../fonts/Norican.otf") format("opentype"),
+    url("../fonts/Norican-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 .logo {
-    font-family: 'Noricon', sans-serif; 
-    letter-spacing: 0.3rem;
+  font-family: "Noricon", sans-serif;
+  letter-spacing: 0.3rem;
 }

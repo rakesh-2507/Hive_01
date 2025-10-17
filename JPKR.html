@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIVE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        body {
+            overflow-y: hidden;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        .section-content-20 ul li::before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f0a9";
+            font-weight: 900;
+            color: #3c3c3c;
+            margin-right: 0.5rem;
+            flex-shrink: 0;
+        }
+
+        .section-content-20 ul a {
+            text-decoration: none;
+            color: #3c3c3c;
+        }
+
+
+        .submenuone,
+        .submenutwo {
+            display: flex;
+            flex-wrap: wrap;
+            height: fit-content;
+        }
+
+        .paper-section {
+            padding: 3rem 5rem 0rem 5rem;
+            margin: 30px;
+            background: #fff;
+            border-radius: 6px;
+            border: 1px solid #f8f1f1;
+            background: linear-gradient(#f9f9f96b, #fafafa);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4), 0 4px 6px rgba(0, 0, 0, 0.08);
+            outline: 2px dashed rgba(0, 0, 0, 0.05);
+            outline-offset: -8px;
+            position: relative;
+            overflow-y: scroll;
+            height: 100vh;
+            scrollbar-width: none;
+        }
+
+        .paper-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 6px;
+            pointer-events: none;
+            mix-blend-mode: multiply;
+        }
+
+        .hidden-section {
+            display: none;
+        }
+
+        .section-link.active {
+            color: #005c62;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header 1 -->
+    <div class="header-top">
+        <div class="menu-logo">
+            <div class="menu-icon" id="menuToggle">&#9776;</div>
+            <div class="logo">
+                <img src="images/Broucher_Logo.png" width="7%" alt="HIVE_LOGO">Hive
+            </div>
+        </div>
+        <div>
+            <button class="btn btn-outline-primary btn-sm">Register</button>
+            <button class="btn btn-primary btn-sm">Sign In</button>
+        </div>
+    </div>
+
+    <!-- Header 2 -->
+    <div class="header-bottom">
+        <div class="menu-item" data-dropdown="homeDropdown">
+            <a href="home.html">HOME</a>
+        </div>
+        <div class="menu-item" data-dropdown="solutionsDropdown">
+            <a href="solutions.html">SOLUTIONS</a>
+        </div>
+        <div class="menu-item" data-dropdown="featuresDropdown">
+            <a href="features.html">FEATURES</a>
+        </div>
+        <div class="menu-item" data-dropdown="industriesDropdown">
+            <a href="industries.html">INDUSTRIES SERVED</a>
+        </div>
+        <div class="menu-item" data-dropdown="benefitsDropdown">
+            <a href="benefits.html">BENEFITS</a>
+        </div>
+        <div class="menu-item" data-dropdown="resourcesDropdown">
+            <a href="resources.html">RESOURCES</a>
+        </div>
+        <div class="menu-item" data-dropdown="pricingDropdown">
+            <a href="pricing.html">PRICING</a>
+        </div>
+        <div class="menu-item" data-dropdown="aboutDropdown">
+            <a href="about.html">ABOUT US</a>
+        </div>
+        <div class="menu-item" data-dropdown="supportDropdown">
+            <a href="support.html">SUPPORT</a>
+        </div>
+        <div class="menu-item" data-dropdown="contactDropdown">
+            <a href="contact.html">CONTACT US</a>
+        </div>
+        <div class="menu-item" data-dropdown="jpkrDropdown">
+            <a href="JPKR.html" class="Subactive">JPKR</a>
+        </div>
+
+    </div>
+
+    <!-- Breadcrumb -->
+    <nav id="breadcrumb-bar" aria-label="breadcrumb">
+        <ol class="breadcrumb m-0"></ol>
+    </nav>
+
+    <!-- Dropdown container -->
+    <div class="header-dropdown-container" id="dropdownContainer">
+        <div id="homeDropdown" class="header-dropdown-content">
+            <div class="dropdown-left">
+                <a href="home.html#Overview_of_Solution">Overview of Solution </a>
+                <a href="home.html#Key_Value_Proposition">Key Value Proposition</a>
+                <a href="home.html#Quick_Demo">Quick Demo</a>
+            </div>
+            <div class="dropdown-right">
+                <h3>HOME</h3>
+                <p>Our solution empowers enterprises to move beyond spreadsheets and fragmented tools, transforming
+                    fixed asset
+                    management into a streamlined, automated, and strategically valuable process.</p>
+            </div>
+        </div>
+        <div id="solutionsDropdown" class="header-dropdown-content">
+            <div class="dropdown-left">
+                <a href="solutions.html#Fixed_Asset_Management">Fixed Asset Management</a>
+                <a href="solutions.html#Asset_Accounting">Asset Accounting</a>
+                <a href="solutions.html#Inventory_&_Equipment">Inventory & Equipment</a>
+                <a href="solutions.html#Custom_Solutions">Custom Solutions</a>
+            </div>
+            <div class="dropdown-right">
+                <h3>SOLUTIONS</h3>
+                <p>Our <strong>Fixed Asset Management Solution </strong> empowers enterprises to go beyond spreadsheets
+                    and
+                    fragmented systems — enabling smarter, compliant, and cost-efficient asset management that drives
+                    measurable
+                    ROI.</p>
+            </div>
+        </div>
+        <div id="featuresDropdown" class="header-dropdown-content">
+            <div class="dropdown-left">
+                <a href="features.html#Centralized_Asset_Register">Centralized Asset Register</a>
+                <a href="features.html#Acquisition_&_Disposal">Acquisition & Disposal</a>
+                <a href="features.html#Geo_Tagging">Geo-Tagging</a>
+                <a href="features.html#Preventive_&_Corrective_Maintenance">Preventive & Corrective Maintenance</a>
+                <a href="features.html#Multi_Level_User_Access">Multi-Level User Access</a>
+                <a href="features.html#Mobile_App_Integration">Mobile App Integration</a>
+                <a href="features.html#Cloud_&_On_Premise">Cloud & On-Premise</a>
+                <a href="features.html#Analytics_&_Dashboards">Analytics & Dashboards</a>
+            </div>
+            <div class="dropdown-right">
+                <h3>FEATURES</h3>
+                <p>Our feature-rich solution ensures that enterprises can not only track assets efficiently but also
+                    unlock
+                    their true value — driving cost savings, compliance, and operational excellence</p>
+            </div>
+        </div>
+        <div id="industriesDropdown" class="header-dropdown-content">
+            <div class="dropdown-left">
+                <a href="industries.html#Aviation">Aviation</a>
+                <a href="industries.html#Publishing">Publishing</a>
+                <a href="industries.html#Corporate_&_Enterprises">Corporate & Enterprises</a>
+                <a href="industries.html#Real_Estate_/_Gated_Communitie">Real Estate / Gated Communitie</a>
+                <a href="industries.html#Educational_Institutions">Educational Institutions</a>
+                <a href="industries.html#Hospitals_&_Healthcare">Hospitals & Healthcare</a>
+                <a href="industries.html#Manufacturing_&_Warehousing">Manufacturing & Warehousing</a>
+                <a href="industries.html#Government_&_Public_Sector">Government & Public Sector</a>
+            </div>
+            <div class="dropdown-right">
+                <h3>INDUSTRIES SERVED</h3>
+                <p>Our industry-focused approach ensures that no matter your sector, you gain a scalable, reliable, and
+                    compliant platform that transforms asset management into a driver of efficiency, savings, and growth
+                </p>
+            </div>
+        </div>
+        <div id="benefitsDropdown" class="header-dropdown-content">
+            <div class="dropdown-left">
+                <a href="benefits.html#Cost_Savings_&_ROI">Cost Savings & ROI</a>
+                <a href="benefits.html#Compliance_&_Risk_Mitigation">Compliance & Risk Mitigation</a>
+                <a href="benefits.html#Transparency_&_Accountability">Transparency & Accountability</a>
+                <a href="benefits.html#Operational_Efficiency">Operational Efficiency</a>
+                <a href="benefits.html#Fraud_&_Loss_Prevention">Fraud & Loss Prevention</a>
+            </div>
+            <div class="dropdown-right">
+                <h3>BENEFITS</h3>
+                <p>Our Enterprise Fixed Asset Management Solution delivers a combination of financial, operational, and
+                    compliance benefits, turning asset management into a strategic advantage rather than just a routine
+                    function.
+                </p>
+            </div>
+        </div>
+        <div id="resourcesDropdown" class="header-dropdown-content">
+            <div class="dropdown-left">
+                <a href="resources.html#Case_Studies">Case Studies</a>
+                <a href="resources.html#Whitepapers">Whitepapers</a>
+                <a href="resources.html#Blogs">Blogs</a>
+                <a href="resources.html#FAQs">FAQs</a>
+                <a href="resources.html#Guides">Guides</a>
+            </div>
+            <div class="dropdown-right">
+                <h3>RESOURCES</h3>
+                <p>Our Resources section is designed to be a comprehensive knowledge hub, supporting enterprises at
+                    every stage
+                    of their asset management journey — from learning and planning to execution and optimization.</p>
+            </div>
+        </div>
+        <div id="pricingDropdown" class="header-dropdown-content">
+            <div class="dropdown-left">
+                <a href="pricing.html#Plans_&_Packages">Plans & Packages</a>
+                <a href="pricing.html#Enterprise_Customization">Enterprise Customization</a>
+                <a href="pricing.html#Free_Trial_/_Demo">Free Trial / Demo</a>
+            </div>
+            <div class="dropdown-right">
+                <h3>PRICING</h3>
+                <p>Our pricing approach ensures transparency, scalability, and value for every enterprise, helping
+                    organizations
+                    invest confidently in a solution that delivers measurable ROI</p>
+            </div>
+        </div>
+        <div id="aboutDropdown" class="header-dropdown-content">
+            <div class="dropdown-left">
+                <a href="about.html#Company_Profile">Company Profile</a>
+                <a href="about.html#Vision_&_Mission">Vision & Mission</a>
+                <a href="about.html#Leadership_Team">Leadership Team</a>
+                <a href="about.html#Certifications">Certifications</a>
+            </div>
+            <div class="dropdown-right">
+                <h3>ABOUT US</h3>
+                <p>Our About Us page communicates our credibility, expertise, and dedication to empowering enterprises
+                    through
+                    efficient, compliant, and intelligent asset management.</p>
+            </div>
+        </div>
+        <div id="supportDropdown" class="header-dropdown-content">
+            <div class="dropdown-left">
+                <a href="support.html#Knowledge_Base">Knowledge Base</a>
+                <a href="support.html#Training_&_Onboarding">Training & Onboarding</a>
+                <a href="support.html#Helpdesk">Helpdesk</a>
+                <a href="support.html#Contact_Support">Contact Support</a>
+            </div>
+            <div class="dropdown-right">
+                <h3>SUPPORT</h3>
+                <p>Our Support framework ensures that your enterprise has continuous guidance, expert assistance, and
+                    self-service resources, making fixed asset management smooth, efficient, and reliable.</p>
+            </div>
+        </div>
+        <div id="contactDropdown" class="header-dropdown-content">
+            <div class="dropdown-left">
+                <a href="contact.html#Sales_Inquiry">Sales Inquiry</a>
+                <a href="contact.html#Demo_Request">Demo Request</a>
+                <a href="contact.html#Office_Locations">Office Locations</a>
+                <a href="contact.html#Email_/_Phone_/_Chat">Email / Phone / Chat</a>
+            </div>
+            <div class="dropdown-right">
+                <h3>CONTACT US</h3>
+                <p>Our Contact Us page ensures that every enterprise can easily connect with the right team, receive
+                    tailored
+                    support, and begin their journey toward efficient, compliant, and strategic fixed asset management.
+                </p>
+            </div>
+        </div>
+        <div id="jpkrDropdown" class="header-dropdown-content">
+            <div class="dropdown-left">
+                <a href="jpkr.html#Profile_and_Philosophy">Profile and Philosophy</a>
+                <a href="jpkr.html#Srimad_Ramayana_&_Mahabharatam">Srimad Ramayana & Mahabharatam</a>
+            </div>
+            <div class="dropdown-right">
+                <h3>JPKR</h3>
+                <p>
+                    He was graduated from the Presidency College, Madras in 1944 and has a record of 60 years of public
+                    life covering all fields of social and cultural activities and occupying higher posts.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <!-- Side menu overlay -->
+    <div class="side-menu-overlay" id="overlay">
+        <div class="side-menu" id="sideMenu">
+            <div class="side-menu-top">
+                <div class="logo">
+                    <img src="images/Broucher_Logo.png" width="10%" alt="HIVE_LOGO">Hive
+                </div>
+                <div class="close-btn" id="closeMenu">&times;</div>
+            </div>
+            <div class="menu-item">
+                <a href="home.html">HOME</a>
+                <span class="arrow"><i class="fa fa-chevron-circle-down"></i></span>
+                <div class="side-submenu">
+                    <a href="home.html#Overview_of_Solution">Overview of Solution </a>
+                    <a href="home.html#Key_Value_Proposition">Key Value Proposition</a>
+                    <a href="home.html#Quick_Demo">Quick Demo</a>
+                </div>
+            </div>
+            <div class="menu-item">
+                <a href="solutions.html">SOLUTIONS</a>
+                <span class="arrow"><i class="fa fa-chevron-circle-down"></i></span>
+                <div class="side-submenu">
+                    <a href="solutions.html#Fixed_Asset_Management">Fixed Asset Management</a>
+                    <a href="solutions.html#Asset_Accounting">Asset Accounting</a>
+                    <a href="solutions.html#Inventory_&_Equipment">Inventory & Equipment</a>
+                    <a href="solutions.html#Custom_Solutions">Custom Solutions</a>
+                </div>
+            </div>
+            <div class="menu-item">
+                <a href="features.html">FEATURES</a>
+                <span class="arrow"><i class="fa fa-chevron-circle-down"></i></span>
+                <div class="side-submenu">
+                    <a href="features.html#Centralized_Asset_Register">Centralized Asset Register</a>
+                    <a href="features.html#Acquisition_&_Disposal">Acquisition & Disposal</a>
+                    <a href="features.html#Geo_Tagging">Geo-Tagging</a>
+                    <a href="features.html#Preventive_&_Corrective_Maintenance">Preventive & Corrective Maintenance</a>
+                    <a href="features.html#Multi_Level_User_Access">Multi-Level User Access</a>
+                    <a href="features.html#Mobile_App_Integration">Mobile App Integration</a>
+                    <a href="features.html#Cloud_&_On_Premise">Cloud & On-Premise</a>
+                    <a href="features.html#Analytics_&_Dashboards">Analytics & Dashboards</a>
+                </div>
+            </div>
+            <div class="menu-item">
+                <a href="industries.html">INDUSTRIES SERVED</a>
+                <span class="arrow"><i class="fa fa-chevron-circle-down"></i></span>
+                <div class="side-submenu">
+                    <a href="industries.html#Aviation">Aviation</a>
+                    <a href="industries.html#Publishing">Publishing</a>
+                    <a href="industries.html#Corporate_&_Enterprises">Corporate & Enterprises</a>
+                    <a href="industries.html#Real_Estate_/_Gated_Communitie">Real Estate / Gated Communitie</a>
+                    <a href="industries.html#Educational_Institutions">Educational Institutions</a>
+                    <a href="industries.html#Hospitals_&_Healthcare">Hospitals & Healthcare</a>
+                    <a href="industries.html#Manufacturing_&_Warehousing">Manufacturing & Warehousing</a>
+                    <a href="industries.html#Government_&_Public_Sector">Government & Public Sector</a>
+                </div>
+            </div>
+            <div class="menu-item">
+                <a href="benefits.html">BENEFITS</a>
+                <span class="arrow"><i class="fa fa-chevron-circle-down"></i></span>
+                <div class="side-submenu">
+                    <a href="benefits.html#Cost_Savings_&_ROI">Cost Savings & ROI</a>
+                    <a href="benefits.html#Compliance_&_Risk_Mitigation">Compliance & Risk Mitigation</a>
+                    <a href="benefits.html#Transparency_&_Accountability">Transparency & Accountability</a>
+                    <a href="benefits.html#Operational_Efficiency">Operational Efficiency</a>
+                    <a href="benefits.html#Fraud_&_Loss_Prevention">Fraud & Loss Prevention</a>
+                </div>
+            </div>
+            <div class="menu-item">
+                <a href="resources.html">RESOURCES</a>
+                <span class="arrow"><i class="fa fa-chevron-circle-down"></i></span>
+                <div class="side-submenu">
+                    <a href="resources.html#Case_Studies">Case Studies</a>
+                    <a href="resources.html#Whitepapers">Whitepapers</a>
+                    <a href="resources.html#Blogs">Blogs</a>
+                    <a href="resources.html#FAQs">FAQs</a>
+                    <a href="resources.html#Guides">Guides</a>
+                </div>
+            </div>
+            <div class="menu-item">
+                <a href="pricing.html">PRICING</a>
+                <span class="arrow"><i class="fa fa-chevron-circle-down"></i></span>
+                <div class="side-submenu">
+                    <a href="pricing.html#Plans_&_Packages">Plans & Packages</a>
+                    <a href="pricing.html#Enterprise_Customization">Enterprise Customization</a>
+                    <a href="pricing.html#Free_Trial_/_Demo">Free Trial / Demo</a>
+                </div>
+            </div>
+            <div class="menu-item">
+                <a href="about.html">ABOUT US</a>
+                <span class="arrow"><i class="fa fa-chevron-circle-down"></i></span>
+                <div class="side-submenu">
+                    <a href="about.html#Company_Profile">Company Profile</a>
+                    <a href="about.html#Vision_&_Mission">Vision & Mission</a>
+                    <a href="about.html#Leadership_Team">Leadership Team</a>
+                    <a href="about.html#Certifications">Certifications</a>
+                </div>
+            </div>
+            <div class="menu-item">
+                <a href="support.html">SUPPORT</a>
+                <span class="arrow"><i class="fa fa-chevron-circle-down"></i></span>
+                <div class="side-submenu">
+                    <a href="support.html#Knowledge_Base">Knowledge Base</a>
+                    <a href="support.html#Training_&_Onboarding">Training & Onboarding</a>
+                    <a href="support.html#Helpdesk">Helpdesk</a>
+                    <a href="support.html#Contact_Support">Contact Support</a>
+                </div>
+            </div>
+            <div class="menu-item">
+                <a href="contact.html">CONTACT US</a>
+                <span class="arrow"><i class="fa fa-chevron-circle-down"></i></span>
+                <div class="side-submenu">
+                    <a href="contact.html#Sales_Inquiry">Sales Inquiry</a>
+                    <a href="contact.html#Demo_Request">Demo Request</a>
+                    <a href="contact.html#Office_Locations">Office Locations</a>
+                    <a href="contact.html#Email_/_Phone_/_Chat">Email / Phone / Chat</a>
+                </div>
+            </div>
+            <div class="menu-item">
+                <a href="JPKR.html" class="Subactive">JPKR</a>
+                <span class="arrow"><i class="fa fa-chevron-circle-down"></i></span>
+                <div class="side-submenu">
+                    <a href="jpkr.html#Profile_and_Philosophy">Profile and Philosophy</a>
+                    <a href="jpkr.html#Srimad_Ramayana_&_Mahabharatam">Srimad Ramayana & Mahabharatam</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-sticky" id="stickyHeader">
+        <!-- Left: Menu Button -->
+        <div class="sticky-left">
+            <div class="menu-icon menu-btn">&#9776;</div>
+        </div>
+
+        <!-- Center: Menu Items + Logo -->
+        <div class="sticky-center">
+            <div class="menu-left">
+                <a href="home.html">HOME</a>
+                <a href="solutions.html">SOLUTIONS</a>
+                <a href="features.html">FEATURES</a>
+                <a href="industries.html">INDUSTRIES SERVED</a>
+                <a href="benefits.html">BENEFITS</a>
+            </div>
+
+            <div class="logo">
+                <img src="images/Broucher_Logo.png" width="50%" alt="">Hive
+            </div>
+
+            <div class="menu-right">
+                <a href="resources.html">RESOURCES</a>
+                <a href="pricing.html">PRICING</a>
+                <a href="about.html">ABOUT US</a>
+                <a href="support.html">SUPPORT</a>
+                <a href="contact.html">CONTACT US</a>
+                <a href="JPKR.html" class="Subactive">JPKR</a>
+            </div>
+        </div>
+
+        <!-- Right: Register / Sign In -->
+        <div class="sticky-right">
+            <a href="register.html" class="btn">Register</a>
+            <a href="signin.html" class="btn">Sign In</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <section id="Profile_and_Philosophy" class="submenuone">
+            <div class="section-content-70 paper-section">
+                <div class="d-flex" style="flex-direction: column; width: fit-content;">
+                    <div style="display: flex;">
+                        <h2 style="font-size:1.6rem;  color:#005c62; margin-bottom:1rem;">A Short Profile and
+                            Philosophy of Shri SBPBK Satyanarayana Rao
+                        </h2>
+                    </div>
+                    <div style="display: flex; justify-content: flex-end; ">
+                        <p style="font-size: 15px;">-- Justice P. Kodanda Ramayya</p>
+                    </div>
+                </div>
+                <p style="font-size:1rem; line-height:1.7; color:#333; margin-bottom:1rem;">
+                    Sri SBPBK was born in a Zamindar family of Kapileswarapuram in East Godavari District on 23.09.1921.
+                    His full name is Sreebalusu Prabhakara Buchi Krishna Satyanarayana Rao. He was graduated from the
+                    Presidency College, Madras in 1944 and has a record of 60 years of public life covering all fields
+                    of social and cultural activities and occupying higher posts. He was the chairman of Zilla Parishad
+                    for 12 years and Member of A.P. Legislative Council representing North Circar Districts Graduates
+                    Constituency for two terms in 1958 and 1980. He was Member of Andhra University Syndicate from 1981
+                    to 1984. He was a Member of A.P. Sangeetha Nataka Academy from 1981 to 84. He was Chairman of
+                    Srisailam Devasthanam Trust Board from 1977 to 1980. A pioneer of industrial development in sugar
+                    manufacture and textiles along with soft drinks and IMFL since 1955 upto date. Founder President of
+                    S.R.V.B.S.J.B. Maharani College, Peddapuram since 1967. He established Veda Pathasala and Hari Katha
+                    Pathasala at Kapileswarapuram since 1973 upto date. He got Vijaya Ratna by the International
+                    Friendship Society of India, New Delhi. He was Elected Member of Lok Sabha from Rajahmundry
+                    constituency. Served as Minister for State for Agriculture for one year and there after continued as
+                    Member of Parliament for the rest of the term i.e., 13.10.1999 to 7.02.2004.
+                </p>
+                <p style="font-size:1rem; line-height:1.7; color:#333; margin-bottom:1.5rem;">
+                    During the term he was the Chairman of Zilla Parishad, he made several developments in the education
+                    of girls and tribal and backward areas and extra curricular activities like songs and dramas. It was
+                    considered to be a golden era. He took initiative for starting Kritiventi Perraju Panthulu Junior
+                    Collge at Ramachandrapuram and also Agricultural Polytechnic at Ramachandrapuram in his name. He got
+                    several moral instruction and also teaching of spiritual lessons printed and supplied to all
+                    secondary schools in the district.
+                </p>
+                <p>During Gandhi Centenary Celebrations, he organized Essay Writing Competition for the students of High
+                    Schools in the District and for those students who have come out successful in the competitions, he
+                    also organized visit of all important places like Sabarmathi Ashram, Wardha, Birla Mandir, etc.
+                    places connected with Gandhiji’s life and also made available the meeting of Smt. Indira Gandhi who
+                    had appreciated their visit and blessed them. </p>
+                <p>Tracing the beginning of irrigation systems in Andhra Pradesh, he got details of the life of Sri
+                    ARTHUR COTTON who built the Godavari and Krishna Ayacuts nearly 130 years ago fully investigated and
+                    got his biography published to commemorate his memory. This book is considered to be a standard book
+                    of its kind by the Irrigation Department. Sri Satyanarayana Rao was affectionately called as
+                    “UPADHYAYA BANDHU”. Another activity of irrigation is when there is a breach to the Godavari Bund in
+                    the year 1953 and 1956 at Kapileswarapuram and Kulla, the services rendered to flood victims by Sri
+                    Rao were appreciated by Sri Chandulal Trivedi, the then Governor of Andhra Pradesh.</p>
+                <p>During the Pakistan war, East Godavari District secured No.1 position in collecting donations to war
+                    fund and gold under his able leadership and the then Prime Minister, Lal Bahadur Sastry made a
+                    special visit to the District and personally received the gold collected from Sri Satyanarayana Rao.
+                </p>
+                <p>During his capacity as M.P., he utilized Constituency Development Fund and other Development Funds to
+                    a tune of 12.17 crores for Rural Development taking about 5 to 600 works towards creating
+                    infrastructure like roads and bridges and helping the poor SCs, STs and BCs and other Minorities.
+                </p>
+                <p style="color: #005c62; font-size: x-large;">‘‘In Industries, he got employed nearly 15000 people
+                    directly or indirectly. For such innovative work,
+                    he was honoured with the title of ‘VIJAYA RATNA’.’’</p>
+                <p>On the cultural activities, besides starting Harikatha Patasala and Veda Patasala at
+                    Kapileswarapuram, he distributed 18 Lalita Kala Puraskarams and 18 Sahitya Puraskarams giving
+                    outstanding persons in those fields respectively. He loved all those persons as members of the
+                    family and they in their turn considered that they are the members of his family. That is how he
+                    loved people and people loved him.</p>
+                <p>He was born in a family of Zamindars, a noble family and his actions and utterances are nobler and
+                    ideal for other contemporaries to follow. We can call him ‘Raja Satyanarayana’.</p>
+                <p>He has got a great regard for his father Sri B.C. Sarvaraya, a majestic personality with his turban
+                    and hence, he established a number of institutions in his name, both industrial, financial and
+                    educational. </p>
+                <p>His brother Sri B.P. Pattabhirama Rao occupied the post of Minister of State for Industries for some
+                    time and also for Finance for some time during the period when Smt. Indira Gandhi was the Prime
+                    Minister.</p>
+
+
+                <h3 style="font-size:1.3rem; font-weight:600; color:#005c62; margin-bottom:1rem;">Subhashitha Ratna Mala
+                </h3>
+                <p>Sri S.B.P.B.K. published Subhashitha Ratna Mala in nine volumes published by Sarvaraya Sugars
+                    covering different religions</p>
+                <ul style="padding-left:1.2rem; list-style:disc; color:#333; font-size:0.95rem; line-height:1.6;">
+                    <li><strong>Bhagavat Gita</strong></li>
+                    <li><strong>Utterances of Sankara Bhagavat Pada</strong></li>
+                    <li><strong>Utterances of Goutama Budha</strong></li>
+                    <li><strong>Valmiki</strong></li>
+                    <li><strong>Christ</strong></li>
+                    <li><strong>Maha Bharata by Veda Vyasa</strong></li>
+                    <li><strong>Prophet Mohammed</strong></li>
+                    <li><strong>Sri Ramanuja</strong></li>
+                    <li><strong>Sri Nanak</strong></li>
+                </ul>
+                <p>Thus, he has established the idea of integration of all religions together, in this multi-religious
+                    country of ours. In his units of industry and even in cultural units, he employed all people of
+                    Christians, Muslims, Dalits and Non-Dalits as he has imbibed the norm of this Vedic religion, which
+                    is not a religion but a way of life. Thus, he helped for the integration of the nation very much in
+                    his activity and also in his utterances</p>
+                <p>Sri S.B.P.B.K. has a deep knowledge of Sruti, Smruthi, Purana and Itihasas. He published 20 to 25
+                    books of authors of great erudite scholarship of ancient times and himself read them intensively and
+                    understood the philosophy behind those utterances. Accordingly, he got abiding faith in the
+                    utterance of Sage Veda Vyasa, the author of Maha Bharata, who said, <strong
+                        style="font-size: larger;"> “I will disclose a great secret
+                        – there is no position superior to that of humanity”,</strong> and hence, every intelligent man
+                    should try to
+                    acquire liberation of the soul, which is known as Atma Siddhi by Veda, as man alone is endowed with
+                    the faculty of acquiring liberation of soul. For that, one should follow the concept of Dharma, a
+                    duty oriented, which involves sacrifice and said that man should follow five concepts of
+                    <strong>‘Dharmam,
+                        Srutam, Tapas, Diksha, Vyavasayam’</strong> i.e., earn money on proper way, study subject,
+                    concentrate on
+                    work, take a owe having an object of establishing institutions of permanent value and for that
+                    purpose constantly make effort which is last thing called as Vyavasaya. He did all these things with
+                    such a dedicated mind that he created a source for Dharmic work.
+                </p>
+                <p>Unlike Pandit Madan Mohan Malaviya who declared that ‘I am the greatest beggar’, and secured
+                    donations from several persons, Sri S.B.P.B.K. secured a source for Dharmik work himself, and used
+                    the same for Dharmik work. For this work of Pravruthi Marga, he established number of units
+                    -industrial and financial and the social and cultural work established by him constantly grew from
+                    strength to strength in view of the permanent source of wealth from those units. Hence he believes
+                    strongly that surplus money is not his and it is intended for distribution and he did accordingly.
+                </p>
+                <p>Finally, we can sum up his philosophy in life. One conspicuous feature of his life is, he has no
+                    children. Himself or his Dharmapatni Smt. Rajarajeswaramma do not have any such feeling of the
+                    absence of progeny at any time. They both accept with full faith the utterance of the Sruti that
+                    every human being should attain immortality by practicing Pravruthi Dharma initially, by working
+                    vigorously to secure wealth and in the end of life he should attain immortality by
+                    sacrificing/discarding all activities, progeny and wealth. Not by work, not by progeny, not by
+                    wealth, by renunciation alone one attains immortality – tayagenaikenamrtatva manasuh. Sri S.B.P.B.K.
+                    followed these concepts and ended his life with total sacrifice.</p>
+                <p>He lived 90 years and his 60 years career clearly warrants a posthumous
+                    national award to be given to
+                    his personality by the Union of India.</p>
+            </div>
+        </section>
+        <section id="Srimad_Ramayana_&_Mahabharatam" class="submenuone hidden-section">
+            <div class="section-content-70 paper-section" style="padding:3rem 5rem 0rem 5rem;">
+                <div class="d-flex" style="flex-direction: column; width: fit-content;">
+                    <div style="display: flex;">
+                        <h2 style="font-size:1.6rem;  color:#005c62; margin-bottom:1rem;">Srimad Ramayana &
+                            Mahabharatam, <br>Our National Epics Promote Integration Of Our Nation
+                        </h2>
+                    </div>
+                </div>
+                <div style=" display: flex; flex-direction: column; align-items: center;margin: 3% auto;">
+                    <p
+                        style="font-size:1rem; line-height:1.7; color:#333; margin-bottom:1rem;background: rgb(246, 246, 246);border-radius: 5px;padding: 1rem;">
+                        " Narayanam Namaskrutya Naramchaiva Narothamam <br>
+                        Devim Saraswatheem Vyasam Tato Jaya Mudeerayeth <br>
+                        <br>
+                        Veda Vyasa Gunavasa Vidyadisa Satamvasa <br>
+                        Mam Nirasam Gataklesam Kurvanasam Harenisam <br>
+                        <br>
+                        Chandrasekharendra Saraswathi Guru Devo Nama: "
+                    </p>
+                </div>
+                <div>
+                    <p>We have two Itihasas – One <strong> Srimad Ramayana </strong> and another <strong> Sri
+                            Mahabharata.
+                        </strong></p>
+                    <p>These two are heroic histories of our country. But they have definite message for the humanity.
+                        Ramayana is verily the Veda transmuted into Kavya by Sage Valmiki. Sri Mahabharata is known as
+                        5th
+                        Veda containing the essence of Vedas and experience of sages who practiced those concepts. Hence
+                        both of them embody the concepts mentioned in Veda. Hence, we have to correlate the vedic hymns
+                        with
+                        the concepts given in these two epics by sages. The message of both these epics is the same,
+                        namely,
+                        man’s duty to perform Dharma in life. Ramayana says, ‘Dharmasaram Idam Jagat’ from Dharma
+                        follows
+                        wealth, form Dharma comes happiness. By recourse to Dharma, one gets everything. Na sukhath
+                        Labyate
+                        sukham. Dharma does not follow from merriment.</p>
+                    <p>The epic Maha Bharata is the biggest in its composition, seven times as great as the Iliad and
+                        Odyssey combined, animating the hearts of Indians over thousands of years, which will continue
+                        to do
+                        so in future.</p>
+                </div>
+                <div>
+                    <p>Sage Veda Vyasa, herein after called, Maharsi, himself given the message of this epic at the end
+                        of this magnificent work. It is named as Bharata Savitri.</p>
+                    <span>He Said,</span>
+                    <ul
+                        style="padding-left:1.2rem; list-style:disc; color:#333; font-size:0.95rem; line-height:1.6; text-align: justify;">
+                        <li>Thousands of mothers, and fathers, and hundreds of sons and wives arise in the world
+                            and depart from it. Others will arise and similarly go away. There are thousands of
+                            occasions for joy and hundreds of occasions for fears. These affect only him who is
+                            ignorant but never him that is wise”</li>
+                        <li>With uplifted arms I am crying aloud, but nobody hears me. From Dharma originate profit and
+                            pleasure. Why should not Dharma, therefore, be sought? For the sake of pleasure or fear, or
+                            cupidity, or even for life one should not forsake Dharma</li>
+                        <li>Dharma is eternal. Pleasure and pain are not eternal. Jiva is eternal. The cause,
+                            however, of Jivas being invested with a body is not eternal.” </li>
+                    </ul>
+                    <p>If we know the explicit and implicit meaning of this message, we will be knowing fully the scheme
+                        of his work.</p>
+                </div>
+                <div class="speech">
+                    <p>Maharsi Veda Vyasa said, <strong style="font-size: 1.2rem;"> “I will disclose a great secret –
+                            there is no position
+                            superior to that
+                            of humanity”</strong>. Hence, he said, every intelligent man should try to acquire
+                        liberation of the
+                        soul, which is known as Atma Siddhi by Veda, as man alone is endowed with the faculty of
+                        acquiring liberation of soul. Veda is the source of all Dharma. It prescribes the means for Atma
+                        Siddhi in two ways known as Pravrtti and Nivrtti Dharma and prescribes the mode of practicing
+                        the same. </p>
+                    <span>The concept of Dharma is a duty oriented. It involves sacrifice. The summery thereof:-</span>
+                    <ul
+                        style="padding-left:1.2rem; list-style:disc; color:#333; font-size:0.95rem; line-height:1.6; text-align: justify;">
+                        <li>Pravrthi Dhrama involves sacrificing in some measure’ Nivrthi Dharma total sacrifice’. One
+                            in a million alone can follow it. Pravrthi Dharma must be followed by all. </li>
+                        <li>Maharshi examined all Dhramas mentioned in Sruti, Smrti, Puranas and also Acharas
+                            (traditional concepts of Dharma). </li>
+                        <li>Maharshi said ‘one should practice 3 essential dharmas- Dama, Daya, Dana. Keeping oneself
+                            within the bounds is Dama. Self control is its essence. Daya is compassion. Dana is charity.
+                        </li>
+                        <li>If you fail to practice these three, you will meet with opposites – kama, krodha, lobha.-
+                            they are door ways of hell.</li>
+                        <li>How to practice these dharmas?;- <strong> Yagna, Dana, Tapas. </strong>
+                            <ul>
+                                <li style="list-style: none;">1. Yagna means total sacrifice,</li>
+                                <li style="list-style: none;">2. Dana is charities lesser degree,</li>
+                                <li style="list-style: none;">3. Tapas is
+                                    <ul>
+                                        <li style="list-style:inside;">Meditation,</li>
+                                        <li style="list-style:inside;">Concentration of work,</li>
+                                        <li style="list-style:inside;">Doing one’s own duty</li>
+                                    </ul>
+                                </li>
+                                <p>The first two for the society
+                                    and the 3rd is for the individual.</p>
+                            </ul>
+                        </li>
+                        <li>Maharshi said the practice of dharma must be intensive, and hence one should without
+                            transgressing Dharma acquire srutham–science; tapas – concentration; diksa – vow; and
+                            vyavasayam - effort. One should become a first class citizen in any field he works. Maharsi
+                            said, affluence, prosperity, modesty, contentment and fame reside in skill and labour, not
+                            in idleness (MB-12-27-32).</li>
+                        <li>You must acquire knowledge through physical science, moral science and spiritual science.
+                            Through knowledge of physical science – a study of external world, you will get money and
+                            gratify your senses and you also get awareness of several things in the world. Through moral
+                            science – a study of internal world, it gives virtue like dama, which is the basic concept
+                            for all Dharmas. Through spiritual science man gets integrated and knows how to lead an
+                            ideal manhood.</li>
+                        <li>Nasti Siddhih Akarmanah – no one gets success unless works intensively.</li>
+                        <li>A very significant lesson we must know in this context. That is Virat created dharma after
+                            creating beings for their well being. A direct text from Brhadranyaka Upanisad is as,
+                            follows (I, iv. 14) Yet he did not flourish. He specially projected that excellent form,
+                            dharma (righteousness). This dharma is the controller of the Ksatriaya. Therefore there is
+                            nothing higher than that. So even a weak man hopes to defeat a stronger man through dharma
+                            as one contending with the king. That dharma is verily truth, Therefore they say about a
+                            person speaking truth, ‘He speaks of dharma’ or about a person speaking of dharma, ‘He
+                            speaks of truth,’ for both these are but dharma.
+                            <br>
+                            <ul>
+                                <p>We note here two things:</p>
+                                <li style="list-style: decimal;"> Dharma is akin to rule of law which binds all persons
+                                    including
+                                    the ruler.</li>
+                                <li style="list-style: decimal;">Dharma and truth are the same, so they are inter
+                                    changeable words. Hence
+                                    Yatho
+                                    darmah thatho jayah- wherever there is darma, there lies success. Similarly
+                                    Satyameva
+                                    jayathe- truth also triumphs but not falsehood.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Dharmo Viswasya Jagatahprathista - dharma supports the universe. It is supreme means of the
+                            liberation. A significant thing is all beings protect their children. That is how the
+                            activity in the world is carried on. See the hen, a pigeon, a cow – it licks and licks the
+                            calf and make her clean. There is no reciprocity on the part of their offsprings towards
+                            their parents. A stud bull cannot recognize their mother cow. In villages they prevent it.
+                            But, there is no prohibition for it. The obligation of reciprocity is enjoined only on human
+                            beings. Dharma, the righteousness is the origin of mankind. Dharma is the nector of the
+                            gods. After leaving this body, man enjoys, through Dharma, the eternal felicity
+                            (MB-12-193-33). The gods without any exception have to take birth as mortals on earth if
+                            they violate dharma. Likewise, all mortals succeed in acquiring the dignity of gods by
+                            practicing dharma (MB-12-258-41).
+                        </li>
+                        <li>We got political freedom and with that, we also should get social responsibility. In
+                            democracy, a citizen passes the law as a sovereign, as a subject he should obey it. On the
+                            other hand, after independence, we see increase of indiscipline, law breaking, crime, sex
+                            and drug, explosions are increasing. Hence, Swami Ranganathananda emphasized that there
+                            should be spiritual orientation of our democracy. Freedom, without citizenship qualities, is
+                            dangerous and harmful to the humanity and to the globe as a whole.</li>
+                    </ul>
+                    <div style="display: flex; flex-direction: column;">
+                        <h2 style="font-size:1.6rem;  color:#005c62; margin-bottom:1rem;">Infirmities of democracy:
+                        </h2>
+                        <ul
+                            style="padding-left:1.2rem; list-style:disc; color:#333; font-size:0.95rem; line-height:1.6; text-align: justify;">
+                            <li>Plato in his work ‘Republic’ described four types of unjust societies: timocracy,
+                                oligarchy or plutocracy, democracy and tyranny or despotism, in ascending order from
+                                least unjust to the most unjust. With reference to democracy, he described democracy as
+                                the third worst state. He said: It will result into a debtor nation, people borrow at
+                                high interest from the oligarchy, they will suffer bankruptcy. All people receive equal
+                                rights. They lack discipline. Politicians with no training will lead the public. They go
+                                on catering to the whims of the people. Like oligarchy, it lacks unity because people
+                                work for selfish motives instead of for the good of the state. However, we see, in the
+                                absence of other alternative, we have to resort to democracy. However, if the cardinal
+                                principles of virtue mentioned by Socrates are imbibed, democracy will be the happiest
+                                reign.</li>
+                        </ul>
+
+                    </div>
+                    <div style="display: flex; flex-direction: column;">
+                        <h2 style="font-size:1.6rem;  color:#005c62; margin-bottom:1rem;">Ills we have experienced in
+                            this Age:
+                        </h2>
+                        <ul
+                            style="padding-left:1.2rem; list-style:disc; color:#333; font-size:0.95rem; line-height:1.6; text-align: justify;">
+                            <li>It is in democracy, Socrates, the founder of democracy, was executed. It is in
+                                democracy, Abraham Lincoln whose definition of democracy is ever lasting was killed. It
+                                is in democracy we killed Father of our Nation, Indira Gandhi, a dynamic personality,
+                                Rajiv Gandhi, a Gem, known as Mr. Clean.</li>
+                            <li>14.We have embodied in our Constitution, equality, liberty and fraternity. They are
+                                aimed at protecting the citizen against any State action. People mistake them as
+                                political doctrines. On the other hand, Sri Aurobindo said, they are the eternal
+                                attributes of spirit and the practical recognition of the truth. How it is, I shall show
+                                when I come to definition of truth. </li>
+                            <li>Equality is a mandate against the State, but not against co-citizen. The liberty we
+                                enjoy is really empty and unreal. Even married couple cannot go freely during night, let
+                                alone the unmarried girls. Fraternity is not even claimed to be enforceable principle. A
+                                society that aims at equality must sacrifice liberty. Similarly, a society which aims at
+                                liberty, must sacrifice equality. A man or society, so long they live in individual or
+                                communal ego, strife comes. The only remedy is the fraternity, which cannot be enforced
+                                in a court of law. However, our constitution was amended enumerating duties also
+                                indicating that the court can interpret rights in the light of those duties. Hence, we
+                                have to resort to the concept of Dharma, a practice of which by all citizens, promote
+                                cordiality among themselves. </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section id="Uplifting_The_Modern_Man" class="submenuone hidden-section">
+            <div class="section-content-70 paper-section">
+                <div class="d-flex" style="flex-direction: column; width: fit-content;">
+                    <div style="display: flex;">
+                        <h2 style="font-size:1.6rem;  color:#005c62; margin-bottom:1rem;">
+                            Relevance Of Ramayana In Uplifting The Modern Man
+                        </h2>
+                    </div>
+                    <div style="display: flex; justify-content: flex-end; ">
+                        <p style="font-size: 15px;">-- Justice P. Kodanda Ramayya</p>
+                    </div>
+                </div>
+                <div>
+                    <p>I divide this topic into five parts viz., Age of Ramayana, its Message, its Source, Commentary
+                        thereon, Relevancy – both social order and democracy.</p>
+                </div>
+                <div style="color: #005c62;">
+                    <h5>AGE :</h5>
+                    <p>It is well known that Ramayana is a very ancient epic in this country. Everyone knows the same.
+                        Its impact is green in the minds of humanity in spite of its origin beyond history. It is
+                        necessary to give its age, so that we could know its glory and its impact on humanity and its
+                        perennial message to humanity. In our country, our ancestors studied both astrology and
+                        astronomy and a clear measure of time of all events is recorded by them.</p>
+                    <p>Almanac prepared in the earlier periods used to state as 1,25,69,013 as the Ravanabdas and
+                        1,25,58,031 as Sri Rama’s Rajayantabadas (years) if we deduct the later figure from the earlier
+                        figure of Ravanabdas’s it comes 11,000 years which was the total number of years of Sri Rama’s
+                        rule and that clearly synchronizes with the period mentioned by the poet Valmiki in this epic.
+                        In Bramhanda Purana, it was mentioned that Sri Rama was born in Tretayuga on 24th Maha yuga. If
+                        we calculate as per that data we must exclude the Krutayuga of 24th Maha yuga and entire Treta
+                        yuga except 11,000 years (as Sri Rama was said to have been born at the end of Treta yuga after
+                        the sage Parasurama repetedly killed kshatriya race of the world) add the years of all the four
+                        yugas in 25th, 26th 27th and the present 28th Maha yuga upto this period which comes to
+                        1,81,60,100 years by 1999 AD.</p>
+                    <p>Kota Venkatachalam, a Vedic Scholar in his work Brahmanda Sristi Vijnanam in Telugu quoted a
+                        great Scholar Parvatam Nrusimha Deekshitulu as stating that the incarnation of Rama is of
+                        1,46,16,000 years. In that reference, he has given other incarnations also. Hence, Sri
+                        Venkatachalam remarked that the statement in almanacs may require study as some error appears to
+                        have been crept in them. Further, Mulukutla Nrusimha Avadhani in his Ramayana Sara Sidhantham
+                        mentioned useful information regarding this. </p>
+                    <p>It is true, scholars and investigators may differ on this question. However, this data is not
+                        meaningless. In a clear and methodical way our ancestors maintained this record and hence, it is
+                        incumbent on the part of this Viswa Sahitya Sanskriti Samsthan, New Delhi to make a thorough
+                        research and secure an authentic data through scholars.</p>
+                </div>
+                <div style="color: #005c62;">
+                    <h5>MESSAGE:</h5>
+                    <p>Regarding message, Ramayana specifically mentions three concepts of Kama, Artha and extensively
+                        the subject of Dharma[ Kamartha Guna Samyuktam; Dharmardha Guna Vistaram (1-3-8 – Valmiki
+                        Ramayana) ]. Hence, the poet also said, Dharma follows wealth, from Dharma comes happiness, by
+                        recourse to Dharma one gets everything. Dharma is the essence of this world[ Aranya Kanda,
+                        Ch.9-30.] The concepts of Dharma and Satya are interchangeable and hence, Sage Valmiki
+                        extensively portrayed the character of Sri Rama as Satya Dharma Parayana - who practised Truth
+                        and Dharma with abiding faith. Though Ramayana did not mention the metaphysics or the concept of
+                        Moksha, the practise of these concepts of Dharma, Artha and Kama within the bounds of Dharma
+                        leads to redemption. Poet Valmiki built a great mansion of seven stories in the form of this
+                        epic. Truth and Dharma are the two pillars of base. </p>
+                    <p>Fillial devotion and matrimonial purity are the two towers of this mansion. The poet installed
+                        Sri Rama in this mansion who is ever present whenever we open this book. Sri Rama practised
+                        several forms of Dharma which have become virtues making him Lokottara Purusa. </p>
+                </div>
+                <div style="color: #005c62;">
+                    <h5>SOURCE:</h5>
+                    <p>Sage Valmiki himself said that he aims at elucidating the meaning of Vedas[ Vedartha
+                        Brmhanarthaya – 1-4-6- Valmiki Ramayana]. In fact, Veda Vyasa (herein after called Maharsi)
+                        said, Veda is transformed into Ramayana when the Lord visualised by Veda descended on earth as
+                        Sri Rama[ Vedavedye Parepumsi Jate Dasaradhatmaje, Vedah Praceta Sadasit Sakshat Ramayanatmana –
+                        Skanda Purana.]. It is well known that Taittiriya Upanisad 1-11 mentions 25 Dharmas starting
+                        with Satyam Vada, Dharmam Cara. Similarly, Maha Narayana Upanisad mentions the concept of Truth,
+                        Tapas, Dama (self-control), Sama (control of mind), Dana, Dharma, Performance of Sacrifices and
+                        other means of liberation. Further, the Vedic Hymns mentions several concepts both for social
+                        order and for redemption. It mentions Ayakshma sumana bhava – Free yourself from disease and
+                        cultivate good mindedness towards others (Taittiriya Samhita 4-5-1). Similarly, Mitrena
+                        cakshusapasya (Sukla Yajurveda 36-18) – See the whole world with friendly eyes. Rgveda also
+                        mentions seven maryadas – sins to be avoided viz., Brahma Hatya (killing a Vedic Scholar), Steya
+                        (stealing), Anyatalpa (Another’s bed - adultery), Anrta (telling a falsehood), Surapana
+                        (drinking alcohol), minor sins such as, refusing admission for a guest, neglecting Pitru Karyas,
+                        insulting elders. We cannot exhaust the several concepts mentioned in Veda and how they are
+                        embodied in this epic. In fact, Manu said, Vedokhilo Dharma Mulam.</p>
+                    <p>In this connection it is useful to note what Veda Vyasa said about the content of Veda. He said,
+                        Vedas mention ten things for liberation of soul[ Maha Bharata, Santhi Parva, Ch.232-27]. They
+                        are, study of Vedas, adoption of domestic mode of life, penance, observation of all duties,
+                        common to all the modes of life, sacrifice, performance of all acts leading to pure fame,
+                        meditation which is of three kinds, and that kind of liberation called Siddhi attainable in this
+                        life. This definition is comprehensive embodying both Pravruthi and Nivruthi Dharma, concepts
+                        enunciated by Sage Veda Vyasa. Apparently, Ramayana mentions Pravruthi Dharma only, though it
+                        leads to Nivruthi Dharma. Hence, I take this opportunity to state that in every conference
+                        conducted by this Institution should study to what extent the Vedic Hymns pertaining to several
+                        topics of history, geography and science and other subjects and also other facets of Dharma are
+                        embodied in this Epic. It requires a constant and vigilant study as Vedic Hymns are infinite
+                        i.e., Ananta. </p>
+
+                </div>
+                <div style="color: #005c62;">
+                    <h5>COMMENTARY:</h5>
+                    <p>Fortunately, like Greeks, we have got two Epics. The second Epic is Maha Bharata. It also aims at
+                        disseminating the knowledge of Dharma extensively both Pravruthi and Nivruthi Dharmas. Thus, it
+                        constitutes commentary on the concepts and precepts embodied in Ramayana. </p>
+                    <p>In this connection, it is useful to compare these two epics and we will have the great advantage
+                        of studying these concepts of Dharma mentioned extensively in both these Epics. If Ramayana
+                        mentions an ancient story relating to moral or spiritual values, Maharsi crystalised and stated
+                        them as rules. In Ramayana the story relating to Somada, Sage Poulasya, Sage Kasyapa begetting
+                        children is stated by Maharsi thus. He said in different ages, birth took place by mere will, by
+                        look or by touch. The intercourse of the couple came later. Similarly, sage Valmiki gave the
+                        names of ten sage women such as Savitri and Damayanti. Maharsi gave the stories of all those
+                        meritorious women and extensively the story of Savitri and Damayanti. In Yudha Kanda, when
+                        Vibhisana sought asylum, Sugriva and other warriors warned Sri Rama not to accept him, as he was
+                        the brother of the enemy Ravana. Sri Rama just mentioned, “Have you not heard the story of the
+                        pigeon”. The story of pigeon is a very ancient story, long before Ramayana, that embodies the
+                        compassion and hospitality. Maharsi gave extensively eight Chapters about that story and he
+                        further said how the pigeons redeemed themselves and reached higher regions of heaven. Thus, it
+                        is said, Ramayana is Laksya Grandha, whereas Mahabharata is a Laksana Grandha. Maharsi gave the
+                        science of dharma for us. He defined what is dharma, why we should we practice dharma, what are
+                        the precautions to be taken, what is the advantage of practising it, what are the obstacles for
+                        practising it, what are the means of practising it. He fully explained the theory of dharma in
+                        several aspects. He defined as many as 30 dharmas. He began with the Vedic Hymn “Dharmo visvasya
+                        jagatah pratistha”[ Mahanarayana Upanisad, - 79 Anuvaka] dharma is the support of the whole
+                        universe. He amplified it saying the rules of Dharma are sanctioned for the conduct of the
+                        affairs of the world[ Lokayatrarthameveha dharmasya niyamah krtah – Santi Parva Chapter 259-4],
+                        for keeping the world together[ Lokasamgraha samyuktam – Santi Parva 259-26], for promoting
+                        advancement and growth of all beings[ Prabhavarthaya bhutanam dharma pravacanam – Santi Parva
+                        109-10], for maintaining and upholding all beings[ Yatsyat dharanasamyuktam sa dharmahiti
+                        niscayah – Santi Parva 109-10] and for securing non-injury for all beings[ Ahimsarthaya bhutanam
+                        dharma pravacanam krtam – Santi Parva 109-11]. He also said that anything that is delightfully
+                        agreeable is Dharma[ Sarvam Priyabhyupagatam – Santi Parva 259-25] and the rules of Dharma are
+                        ancient, universal, friendly, beneficial and eternal[ Sanatanam, Sarvabhutahitam, Maitram,
+                        Puranam – Santi Parva 262-10].</p>
+                    <p>The literal meaning of dharma is Dharati Lokaniti Dharmah – Dharma bears the world; Dhryate va
+                        Janairiti Dharmah – people bear Dharma. It is a rule of conduct enjoined to every human being as
+                        a duty.</p>
+                    <p>Maharsi, having stated the several facets of Dharma, still gave all embracing working rules for
+                        humanity thus[ Anusasana parva 22-25]: Maryadayam sthito Dharmah: Keeping oneself within bounds
+                        is Dharma and Samascaivasya Laksanam – Self-control is its essence. Secondly, he summed up the
+                        theory of dharma in practice thus: “That which is antagonistic to one’s own self should never be
+                        done in respect of another. Briefly this is dharma”[ Na tat Parasya Sandadhyat Pratikulam
+                        yadatmanah – Mahabharata Udyogaparva 39-72
+                        ].</p>
+                    <p>Further, Ramayana expounded the necessity of a king and also the state craft in Ch.67 and 100 of
+                        Ayodhya Kanda. Maharsi extensively explained these concepts in Santi Parva under the Chapters of
+                        Raja Dharma and Apadharma. Sri Rama practised all these Dharmas and showed ever lasting path to
+                        the humanity to follow his practice of these dharmas. </p>
+                </div>
+                <div style="color: #005c62;">
+                    <h5>RELEVANCY:</h5>
+                    <p>I have divided the relevancy in two parts viz., for social order and for the democracy.</p>
+                    <p>The modern man is under a mistaken impression that the concept of Dharma is a religious concept
+                        and he says that in the set up of democracy we require equality, liberty and fraternity, the
+                        political norms. It is equally a mistake to think that the three doctrines embodied in the
+                        Constitution of our country and other countries throughout the world are political doctrines. In
+                        fact, the three concepts are God Heads of Soul and as observed by Aurobindo. He observed, </p>
+                    <p>“Freedom, equality, brotherhood are three godheads of the soul; they cannot be really achieved
+                        through the external machinery of society or by a man so long as he lives only in the individual
+                        and the communal ego. When the ego claims liberty, it arrives at competitive individualism. When
+                        it asserts equality, it arrives first at strife, then at an attempt to ignore the variations of
+                        Nature, and, as the sole way of doing that successfully, it constructs an artificial and
+                        machine-made society. A society that pursues liberty as its ideal is unable to achieve equality;
+                        a society that aims at equality will be obliged to sacrifice liberty. For the ego to speak of
+                        fraternity is for it to speak of something contrary to its nature”. </p>
+                    <p>Hence he said, the brotherhood is the real key to the triple gospel of the idea of humanity. We
+                        cannot achieve these objects embodied in the Constitution as they are really virtues – different
+                        facets of dharma. Inspite of loud proclamation of these precepts, humanity has not really won
+                        them. Is it possible to practice precept of fraternity when persons born to the same parents
+                        look with reservation, suspicion, hatred and kill each other for property? Fraternity is not
+                        even claimed to be an enforceable principle. Equality can be enforced only against state but not
+                        against a co-citizen. The liberty we enjoy is really empty and unreal. Even married couple
+                        cannot move freely in the streets, let alone unmarried girls. Unless citizens follow Dharma and
+                        become virtuous, the state alone cannot enforce these doctrines and achieve the goal. </p>
+                </div>
+            </div>
+        </section>
+        <div class="section-content-20"
+            style="background-color:#f8f9fa; position: absolute; top: 17%; right: 8%; height: 100vh;">
+            <h3 style="font-size:1.6rem; font-weight:600; color:#005c62; margin-bottom:1rem;">Popular Articles</h3>
+            <ul style="list-style:none; padding:0; margin:0; font-size:0.95rem; line-height:1.6; color:#333;">
+                <li style="margin-bottom:0.8rem;">
+                    <strong>
+                        <a href="#" class="section-link active" data-target="Profile_and_Philosophy">
+                            A Short Profile and Philosophy
+                        </a>
+                    </strong>
+                </li>
+                <li style="margin-bottom:0.8rem;">
+                    <strong>
+                        <a href="#" class="section-link" data-target="Srimad_Ramayana_&_Mahabharatam">
+                            Srimad Ramayana & Mahabharatam
+                        </a>
+                    </strong>
+                </li>
+                <li style="margin-bottom:0.8rem;">
+                    <strong>
+                        <a href="#" class="section-link" data-target="Uplifting_The_Modern_Man">
+                            Uplifting The Modern Man
+                        </a>
+                    </strong>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+    <script>
+        // Page-specific script for HIVE page
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll("section.submenuone");
+            const links = document.querySelectorAll(".section-link");
+            const breadcrumb = document.querySelector("#breadcrumb-bar .breadcrumb");
+
+            if (!breadcrumb || sections.length === 0) return; // Only run on this page
+
+            function updateBreadcrumb(visibleSectionId) {
+                breadcrumb.innerHTML = "";
+
+                // Page breadcrumb
+                const currentPath = window.location.pathname.split("/").pop();
+                if (currentPath) {
+                    const pageItem = document.createElement("li");
+                    pageItem.classList.add("breadcrumb-item");
+                    pageItem.innerHTML = `<a href="${currentPath}">${currentPath.replace(".html", "")}</a>`;
+                    breadcrumb.appendChild(pageItem);
+                }
+
+                // Section breadcrumb (using anchor text)
+                const activeLink = document.querySelector(`.section-link[data-target="${visibleSectionId}"]`);
+                if (activeLink) {
+                    const subItem = document.createElement("li");
+                    subItem.classList.add("breadcrumb-item", "active");
+                    subItem.textContent = activeLink.textContent.trim(); // <- use anchor text here
+                    breadcrumb.appendChild(subItem);
+                }
+
+                // Update active link
+                links.forEach(link => link.classList.remove("active"));
+                if (activeLink) activeLink.classList.add("active");
+            }
+
+            // Handle section link clicks
+            links.forEach(link => {
+                link.addEventListener("click", e => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute("data-target");
+
+                    // Show only clicked section
+                    sections.forEach(sec => {
+                        sec.style.display = sec.id === targetId ? "flex" : "none";
+                    });
+
+                    // Update breadcrumb and URL hash
+                    updateBreadcrumb(targetId);
+                    history.replaceState(null, "", `#${targetId}`);
+                });
+            });
+
+            // Show section from hash on load
+            const hash = window.location.hash.slice(1);
+            if (hash) {
+                sections.forEach(sec => {
+                    sec.style.display = sec.id === hash ? "flex" : "none";
+                });
+                updateBreadcrumb(hash);
+            } else {
+                // Show first section by default
+                sections.forEach((sec, i) => {
+                    sec.style.display = i === 0 ? "flex" : "none";
+                });
+                updateBreadcrumb(sections[0].id);
+            }
+        });
+    </script>
+
+</html>
